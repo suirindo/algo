@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アルゴリズム2</title>
+</head>
+<body>
+    <script>
+        //降順にする
+        const a = [20,10,30,60,50,90,70,40,33,11,25,64,39,0,54];
+        function brsort(array){
+            let len = array.length;
+            for(let i=0; i<len; i++){
+                for(let x = 0; x<len-1; x++){
+                    if(array[x+1] > array[x]){
+                        [array[x+1], array[x]]  = [array[x], array[x+1]];
+                    }
+                }
+            }
+            return array;
+        }
+        console.log(brsort(a));
+    </script>
+</body>
+</html>
